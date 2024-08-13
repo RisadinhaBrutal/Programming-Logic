@@ -12,24 +12,32 @@ Inicio
    Leia (Peso)
    Escreval ("Qual é a sua altura? (cm)")
    Leia (Altura)
+   Escreval
+   
    
    //colocando valores na formula de calculo e exibindo valor do IMC
    IMC <- Peso / (Altura ^ 2)
    IMC <- IMC * 10000  //formatando o valor
-   Escreval ("Você tem um IMC de ", IMC:4:1)
 
-   //perguntar se o usuario quer saber se é bom - Interagindo com o user
-   Escreval ("Quer saber se isso é bom? s/n")
-   Leia (Resposta)
+   Escreval ("Você tem um IMC de ", IMC:4:1)
+   Escreval
    
-   Se (Resposta = "s" ou "S") Entao
-      Se (IMC > 18.5 E IMC < 25) Entao
-         Escreva ("Você é saudável")
+   
+   //Interagindo com o usuario
+   Escreval ("Você quer saber o que isso significa?")
+   Leia (Resposta)
+   Escreval
+
+
+   //Estruturas condicionais
+   Se (Resposta = "s") ou (Resposta = "S") Entao
+      Se (IMC >= 18.5) e (IMC <= 25) Entao
+         Escreval ("Parabens!!! Você está saudável!!!! :D")
       Senao
-         Escreva ("Você precisa cuidar da sua saúde um pouco mais")
-      FimSe
+         Escreval ("Você tem que cuidar mais da sua saúde... D:")
+      Fimse
    Senao
-      Escreva ("tudo bem! Tenha um ótimo dia! :D")
-   FimSe
+      Escreval ("Tudo bem! Tenha um ótimo dia!!!")
+   Fimse
    
 FimAlgoritmo
